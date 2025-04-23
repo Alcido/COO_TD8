@@ -7,15 +7,13 @@ public class Main {
 		
 		
 		Lampe l1=new Lampe("Lampe1");
-		t.ajouterAppareil(l1);
-		
-		/****** A COMPLETER ******/
-		// TODO
-		
-		TelecommandeGraphique tg=new TelecommandeGraphique(t);
-		
+		t.ajouterObjet(l1);
+		Hifi h1 = new Hifi();
+		t.ajouterObjet(h1);
+		ChemineeAdapter c1 = new ChemineeAdapter();
+		t.ajouterObjet(c1);
 
-		
+		TelecommandeGraphique tg=new TelecommandeGraphique(t);
 	}
 	
 }
