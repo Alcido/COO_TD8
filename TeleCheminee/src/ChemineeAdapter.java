@@ -17,4 +17,8 @@ public class ChemineeAdapter implements ElectronicObject {
     public int getIntensite(){
         return c.getLumiere();
     }
+
+    public String toString(){
+        return c.toString();
+    }
 }

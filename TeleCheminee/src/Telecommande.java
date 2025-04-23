@@ -42,6 +42,7 @@ public class Telecommande {
         try {
             while (objets[i] != null) {
                 s.append(objets[i].toString());
+                s.append("\n");
                 i++;
             }
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -55,4 +56,11 @@ public class Telecommande {
         if (objet instanceof Television) ((Television)objet).setSon(s);
     }
 
+    public int getNombre(){
+        int i = 0;
+        while(objets[i] != null){
+            i++;
+        }
+        return i;
+    }
 }
