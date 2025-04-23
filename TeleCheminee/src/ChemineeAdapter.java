@@ -1,14 +1,20 @@
-public class ChemineeAdapter extends Cheminee implements ElectronicObject {
+public class ChemineeAdapter implements ElectronicObject {
+
+    private Cheminee c;
 
     public ChemineeAdapter(){
-        super();
+        c = new Cheminee();
     }
 
     public void allumer(){
-        super.changerIntensite(super.getLumiere()+10);
+        c.changerIntensite(c.getLumiere()+10);
     }
 
     public void eteindre(){
-        super.changerIntensite(0);
+        c.changerIntensite(0);
+    }
+
+    public int getIntensite(){
+        return c.getLumiere();
     }
 }

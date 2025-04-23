@@ -50,7 +50,28 @@ class TelecommandeTest {
         assertEquals(10, ((Hifi) t.getObjets()[0]).getSound());
     }
 
+    @Test
+    void testAllumerCheminee(){
+        Telecommande t = new Telecommande();
+        ElectronicObject chem = new ChemineeAdapter();
+        t.ajouterObjet(chem);
+        //appel de méthode
+        t.getObjets()[0].allumer();
+        //verification
+        assertEquals(10, ((ChemineeAdapter) t.getObjets()[0]).getIntensite());
+    }
 
+    @Test
+    void testEteindreCheminee(){
+        Telecommande t = new Telecommande();
+        ElectronicObject chem = new ChemineeAdapter();
+        t.ajouterObjet(chem);
+        //appel de méthode
+        t.getObjets()[0].allumer();
+        t.getObjets()[0].eteindre();
+        //verification
+        assertEquals(0, ((ChemineeAdapter) t.getObjets()[0]).getIntensite());
+    }
 
 
 
