@@ -12,6 +12,8 @@ public class Main {
 		t.ajouterObjet(h1);
 		ChemineeAdapter c1 = new ChemineeAdapter();
 		t.ajouterObjet(c1);
+		ThermostatAdapter t1 = new ThermostatAdapter();
+		t.ajouterObjet(t1);
 
 		TelecommandeGraphique tg=new TelecommandeGraphique(t);
 	}

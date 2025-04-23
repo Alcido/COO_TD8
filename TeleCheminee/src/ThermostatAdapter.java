@@ -16,6 +16,6 @@ public class ThermostatAdapter implements ElectronicObject{
     }
 
     public String toString(){
-        return t.toString();
+        return "Regarder le menu correspondant !";
     }
 }
