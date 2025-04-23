@@ -7,12 +7,12 @@ public class Main {
 		
 		
 		Lampe l1=new Lampe("Lampe1");
-		t.ajouterAppareil(l1);
+		t.ajouterObjet(l1);
 		
 		/****** A COMPLETER ******/
 		// TODO
 		
-		TelecommandeGraphique tg=new TelecommandeGraphique(t);
+		TelecommandeGraphique tg = new TelecommandeGraphique(t);
 		
 
 		
