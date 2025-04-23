@@ -1,0 +1,63 @@
+@startuml
+
+class Telecommande {
++ Telecommande()
++ ajouterObjet(objet : ElectronicObject)
++ activerObjet(indiceObjet : int)
++ desactiverObjet(indiceObjet : int)
++ activerTout()
++ toString() : String
++ getObjets() : ElectronicObject[]
+}
+
+interface ElectronicObject {
++ allumer()
++ eteindre()
+}
+
+class Lampe {
+- nom : String
+- allume : boolean
++ Lampe(paramNom : String)
++ toString() : String
++ getNom() : String
+}
+
+class Hifi {
+- son : int
++ toString() : String
++ getSound() : int
+}
+
+class Television {}
+
+class Cheminee {
++ intensite : int
++ changerIntensite(i : int)
++ getLumiere() : int
++ toString() : String
+}
+
+class ChemineeAdapter {
++ toString() : String
+}
+
+class Thermostat {
+- temperature : int
++monterTemperature()
++baisserTemperature()
+}
+
+class ThermostatAdapter {
+}
+
+
+Telecommande --> "*" ElectronicObject : -objet
+ElectronicObject <|.. Lampe
+ElectronicObject <|.. Hifi
+ElectronicObject <|.. Television
+ElectronicObject <|.. ChemineeAdapter
+ElectronicObject <|.. ThermostatAdapter
+Cheminee "1" <-- ChemineeAdapter : -cheminee
+Thermostat "1" <-- ThermostatAdapter : -thermostat
+@enduml
