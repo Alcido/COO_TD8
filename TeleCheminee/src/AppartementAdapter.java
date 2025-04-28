@@ -32,6 +32,11 @@ public class AppartementAdapter {
 
         AppareilAppartHifi h1 = (AppareilAppartHifi) appartement.recupererAppareil("hifi", "Chambre2");
         telecommande.ajouterObjet(new HifiAdapter(h1, "Hifi Chambre 2"));
+
+        System.out.println(t1.toString());
+        System.out.println(t2.toString());
+
+        System.out.println(t1 == t2);
     }
 
     public Appartement getAppart(){
