@@ -33,4 +33,12 @@ public class AppartementAdapter {
         AppareilAppartHifi h1 = (AppareilAppartHifi) appartement.recupererAppareil("hifi", "Chambre2");
         telecommande.ajouterObjet(new HifiAdapter(h1, "Hifi Chambre 2"));
     }
+
+    public Appartement getAppart(){
+        return this.appartement;
+    }
+
+    public Telecommande getTelecommande(){
+        return this.telecommande;
+    }
 }
