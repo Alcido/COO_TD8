@@ -4,10 +4,14 @@ public class AppartementAdapter {
     private Appartement appartement;
     private Telecommande telecommande;
 
-    public AppartementAdapter(){
+    public AppartementAdapter() {
         appartement = Appartement.getTemoin();
         telecommande = new Telecommande();
+
+        this.chargerTelecommande();
     }
 
+    public void chargerTelecommande(){
 
+    }
 }
